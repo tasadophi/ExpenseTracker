@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.inputs {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  margin: 0.5rem 0;
+}
+
+.inputs:focus {
+  border: 2px solid #ccc;
+}
+
+.radios {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem;
+  gap: 5rem;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio label {
+  margin-left: 0.5rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  background-color: #0369a1;
+  color: #ecfeff;
+  margin-top: 2rem;
+}
