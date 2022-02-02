@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTransactions } from "../ExpenseApp";
 import ExpenseForm from "../ExpenseForm/ExpenseForm";
 import styles from "./ExpenseInfo.module.css";
@@ -9,10 +9,15 @@ const ExpenseInfo = () => {
   let income = 0;
   let expense = 0;
   transactions.forEach((t) => {
-    income += parseInt(t.income);
-    expense += parseInt(t.expense);
+    t.type === "income"
+      ? (income += parseInt(t.amount))
+      : (expense += parseInt(t.amount));
   });
   const balance = income - expense;
+
+  useEffect(() => {
+    setIsShow((prev) => (prev = false));
+  }, [transactions]);
 
   const toggler = () => {
     setIsShow((prev) => !prev);
