@@ -1,0 +1,25 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* fonts */
+@font-face {
+  font-family: "vazir";
+  src: url(./font/vazir/Vazir-FD.woff);
+}
+
+@font-face {
+  font-family: "vazirBold";
+  src: url(./font/vazir/Vazir-Bold-FD.woff);
+}
+html {
+  font-size: 62.5%;
+  direction: rtl;
+}
+body {
+  padding: 0 1rem;
+  font-family: "vazir";
+}
