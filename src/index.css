@@ -23,3 +23,8 @@ body {
   padding: 0 1rem;
   font-family: "vazir";
 }
+
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+}
