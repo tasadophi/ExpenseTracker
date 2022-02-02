@@ -1,0 +1,41 @@
+.expenseInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoBox {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.balance {
+  font-size: 1.8rem;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.income {
+  background-color: #dcfce7;
+  color: #3f6212;
+  width: 45%;
+}
+
+.expense {
+  background-color: #fee2e2;
+  color: #dc2626;
+  width: 45%;
+}
