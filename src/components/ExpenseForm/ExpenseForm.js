@@ -5,7 +5,7 @@ import styles from "./ExpenseForm.module.css";
 const ExpenseForm = () => {
   const [transaction, setTransaction] = useState({
     type: "income",
-    amount: 0,
+    amount: "",
     desc: "",
   });
   const dispatch = useTransactionsDispatcher();
