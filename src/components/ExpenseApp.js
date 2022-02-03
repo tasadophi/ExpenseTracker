@@ -17,6 +17,10 @@ const reducer = (state, action) => {
   const type = action.type;
   if (type === "add") {
     return [...state, { ...action.transaction, id: generateId() }];
+  } else if (type === "delete") {
+    return [...state].filter(
+      ({ ...t }) => parseInt(t.id) !== parseInt(action.id)
+    );
   }
 };
 
