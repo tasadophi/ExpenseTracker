@@ -6,3 +6,4 @@ I develop this project by react js and used context + reducer because i think he
 
 Like always you can see this app online on: 
 
+https://frosty-ramanujan-992b1d.netlify.app/
