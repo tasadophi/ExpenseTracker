@@ -1,0 +1,12 @@
+.App {
+  margin-top: 4rem !important;
+  text-align: center;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.App h1 {
+  padding: 1rem;
+  color: #52525b;
+}
