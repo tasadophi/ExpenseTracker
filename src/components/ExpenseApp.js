@@ -21,6 +21,12 @@ const reducer = (state, action) => {
     return [...state].filter(
       ({ ...t }) => parseInt(t.id) !== parseInt(action.id)
     );
+  } else if (type === "edit") {
+    const updated = [...state].filter(
+      ({ ...t }) => parseInt(t.id) !== parseInt(action.transaction.id)
+    );
+    const updatedTransactions = [...updated, { ...action.transaction }];
+    return updatedTransactions;
   }
 };
 
