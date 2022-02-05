@@ -29,9 +29,18 @@
   border: none;
   outline: none;
   border-radius: 8px;
-  padding: 0.5rem 2rem;
-  border: 1px solid #dc2626;
-  color: #dc2626;
+  padding: 0.5rem 1rem;
   background-color: #fff;
   cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.delete {
+  border: 1px solid #dc2626;
+  color: #dc2626;
+}
+
+.edit {
+  border: 1px solid #3f6212;
+  color: #3f6212;
 }
