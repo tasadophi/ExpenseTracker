@@ -25,10 +25,38 @@ form {
 .radio {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
-.radio label {
-  margin-left: 0.5rem;
+.radioLabel {
+  font-size: 1.7rem;
+  user-select: none;
+}
+
+.radio .radioCircle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  margin-right: 0.5rem;
+}
+
+.inner {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  background-color: #000;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.active .inner {
+  opacity: 1;
 }
 
 .btn {

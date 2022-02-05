@@ -19,10 +19,15 @@ const ExpenseForm = ({ editId }) => {
     : "مبلغ تراکنش به تومان";
   const btnText = editId ? "ویرایش" : "افزودن";
 
-  const setTransactionInfo = (e, property) =>
+  const setTransactionInfo = (e, property) => {
+    const value = e.currentTarget.dataset.value
+      ? e.currentTarget.dataset.value
+      : e.target.value;
+    console.log(value);
     setTransaction((prev) => {
-      return { ...prev, [property]: e.target.value };
+      return { ...prev, [property]: value };
     });
+  };
 
   const addHandler = (e) => {
     e.preventDefault();
@@ -52,27 +57,29 @@ const ExpenseForm = ({ editId }) => {
         placeholder={amountPlaceholder}
       ></input>
       <div className={styles.radios}>
-        <div className={styles.radio}>
-          <label htmlFor="income">درآمد</label>
-          <input
-            id="income"
-            type="radio"
-            value="income"
-            name="type"
-            checked={transaction.type === "income" && true}
-            onChange={(e) => setTransactionInfo(e, "type")}
-          ></input>
+        <div
+          data-value="income"
+          onClick={(e) => setTransactionInfo(e, "type")}
+          className={`${styles.radio} ${
+            transaction.type === "income" ? styles.active : ""
+          }`}
+        >
+          <span className={styles.radioLabel}>درآمد</span>
+          <span className={styles.radioCircle}>
+            <span className={styles.inner}></span>
+          </span>
         </div>
-        <div className={styles.radio}>
-          <label htmlFor="expense">هزینه</label>
-          <input
-            id="expense"
-            type="radio"
-            value="expense"
-            name="type"
-            checked={transaction.type === "expense" && true}
-            onChange={(e) => setTransactionInfo(e, "type")}
-          ></input>
+        <div
+          data-value="expense"
+          onClick={(e) => setTransactionInfo(e, "type")}
+          className={`${styles.radio} ${
+            transaction.type === "expense" ? styles.active : ""
+          }`}
+        >
+          <span className={styles.radioLabel}>هزینه</span>
+          <span className={styles.radioCircle}>
+            <span className={styles.inner}></span>
+          </span>
         </div>
       </div>
       <button className={`${styles.btn}`}>{btnText}</button>
